@@ -8,7 +8,7 @@ import {
   DeviceMobile,
   PaperPlaneRight
 } from 'phosphor-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { chatsData } from '../Contacts/chatsData'
 import { Texts } from './Texts'
 import { useParams } from 'react-router-dom'
@@ -26,9 +26,9 @@ export function ChatPerContact() {
 
     const inputMessage = event.target.textareaValue.value
 
-    const newMessage = chatsData[parseInt(chave)].poliText.push(inputMessage)
+    chatsData[parseInt(chave)].poliText.push(inputMessage)
 
-    event.target.textareaValue.value= ''
+    event.target.textareaValue.value = ''
   }
 
   const Contact = getData(chave)

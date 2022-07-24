@@ -8,7 +8,6 @@ interface ContactProps {
   date: string
   message: string
   user: string
-  toggle: any
 }
 
 export function Contact({
@@ -17,14 +16,12 @@ export function Contact({
   contactName,
   date,
   message,
-  user,
-  toggle
+  user
 }: ContactProps) {
   return (
     //border-l-4 border-transparent
     <Link
       to={`/chat/${chave}`}
-      onClick={toggle}
       className="flex border justify-between gap-2 m-2 p-2  rounded-lg bg-slate-800 hover:border-l-4 hover:border-sky-500 hover:bg-slate-900"
     >
       <div className="flex items-center justify-center">

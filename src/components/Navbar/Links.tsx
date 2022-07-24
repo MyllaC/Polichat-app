@@ -7,7 +7,7 @@ import { UserIcon } from './Links/UserIcon'
 
 export function Links() {
   return (
-    <div className="flex w-full items-center gap-10 pr-3">
+    <div className="flex w-full items-center gap-10 justify-around">
       <UserIcon />
       <Infos />
       <Channel />

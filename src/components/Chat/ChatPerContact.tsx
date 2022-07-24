@@ -11,22 +11,27 @@ import {
 import { useState } from 'react'
 import { chatsData } from '../Contacts/chatsData'
 import { Texts } from './Texts'
+import { useParams } from 'react-router-dom'
 
-interface ChatProps {
-  contactName: any
-  img: any
-}
+export function ChatPerContact() {
+  const { chave } = useParams<{ chave: string }>()
 
-export function ChatPerContact({ contactName, img }: ChatProps) {
-  const [messages, setMessages] = useState(['oi'])
+  function getData(URLKey: string) {
+    const data = chatsData.find(data => data.chave === URLKey)
+    return data
+  }
 
   function handleCreateNewMessage() {
     event.preventDefault()
 
-    const newMessage = event.target.textareaValue.value
+    const inputMessage = event.target.textareaValue.value
 
-    setMessages([...messages, newMessage])
+    const newMessage = chatsData[parseInt(chave)].poliText.push(inputMessage)
+
+    event.target.textareaValue.value= ''
   }
+
+  const Contact = getData(chave)
 
   return (
     <div className="flex flex-col h-full items-center bg-slate-900 rounded-lg border border-slate-500 ">
@@ -34,11 +39,11 @@ export function ChatPerContact({ contactName, img }: ChatProps) {
         <div className="flex items-center gap-2">
           <ArrowLeft size={25} />
           <img
-            src={img}
+            src={Contact?.img}
             alt="contact photo"
             className="rounded-full w-12 h-12"
           />
-          <p>{contactName}</p>
+          <p>{Contact?.contactName}</p>
         </div>
         <div className="flex items-center gap-4">
           <span className="border border-rose-900 bg-rose-500 font-bold text-rose-900 p-1.5 rounded-full cursor-pointer hover:bg-rose-600">
@@ -48,8 +53,8 @@ export function ChatPerContact({ contactName, img }: ChatProps) {
         </div>
       </header>
       <main className="w-full flex flex-1 flex-col items-end justify-start border-t border-slate-500 bg-slate-600 overflow-auto  bg-cover">
-        {messages?.map((line, i) => (
-          <Texts key={i} content={line} />
+        {Contact?.poliText.map(line => (
+          <Texts content={line} />
         ))}
       </main>
       <footer className="flex-col w-full items-center justify-between border-t border-slate-500">

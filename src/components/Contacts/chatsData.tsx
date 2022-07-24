@@ -5,7 +5,8 @@ export const chatsData = [
     contactName: 'Gabriel Henrique',
     message: 'Oi',
     user: 'Camila Cristina',
-    date: 'Há 23 horas'
+    date: 'Há 23 horas',
+    poliText: ['olá']
   },
   {
     chave: '1',
@@ -13,7 +14,8 @@ export const chatsData = [
     contactName: 'Mariana',
     message: 'oi',
     user: 'Camila Cristina',
-    date: '19/05/2022'
+    date: '19/05/2022',
+    poliText: ['Olá, tudo bem?']
   },
   {
     chave: '2',
@@ -21,7 +23,8 @@ export const chatsData = [
     contactName: 'Gustavo',
     message: 'Ok',
     user: 'Camila Cristina',
-    date: '19/05/2022'
+    date: '19/05/2022',
+    poliText: ['olá']
   },
   {
     chave: '3',
@@ -29,7 +32,8 @@ export const chatsData = [
     contactName: 'Amanda',
     message: 'Conversa finalizada',
     user: 'Suporte CS 18',
-    date: '05/05/2022'
+    date: '05/05/2022',
+    poliText: ['olá']
   },
   {
     chave: '4',
@@ -37,7 +41,8 @@ export const chatsData = [
     contactName: 'Felipe Rocha',
     message: 'Contato redirecionado pelo sistema',
     user: 'Atendente não atribuido',
-    date: '28/04/2022'
+    date: '28/04/2022',
+    poliText: ['olá']
   },
   {
     chave: '5',
@@ -45,6 +50,7 @@ export const chatsData = [
     contactName: 'Fabricio',
     message: 'Conversa finalizada',
     user: 'Suporte CS 14',
-    date: '09/09/2021'
+    date: '09/09/2021',
+    poliText: ['olá']
   }
 ]

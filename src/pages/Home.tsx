@@ -9,11 +9,6 @@ import { useState } from 'react'
 
 export function Home() {
   const { chave } = useParams<{ chave: string }>()
-  function getData(URLKey: string) {
-    const data = chatsData.find(data => data.chave === URLKey)
-    return data
-  }
-  const Contact = getData(chave)
 
   return (
     <div className="flex flex-col min-h-screen ">
@@ -22,15 +17,17 @@ export function Home() {
         <Sidebar />
 
         {!chave ? (
-          <Contacts />
+          <div className="flex flex-1 gap-6 m-4">
+            <Contacts />
+            <div className="flex-1">
+              <Chat />
+            </div>
+          </div>
         ) : (
           <div className="flex flex-1 gap-6 m-4">
             <Contacts />
             <div className="flex-1">
-              <ChatPerContact
-                contactName={Contact?.contactName}
-                img={Contact.img}
-              />
+              <ChatPerContact />
             </div>
           </div>
         )}

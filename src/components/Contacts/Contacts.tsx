@@ -16,6 +16,7 @@ export function Contacts() {
               <Contact
                 toggle={() => setOpen(!isOpen)}
                 key={i}
+                chave={chat?.chave}
                 img={chat?.img}
                 contactName={chat?.contactName}
                 message={chat?.message}

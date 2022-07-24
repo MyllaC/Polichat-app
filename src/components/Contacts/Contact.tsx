@@ -1,17 +1,18 @@
 import { User, WhatsappLogo } from 'phosphor-react'
-import { ChatPerContact } from '../Chat/ChatPerContact'
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 interface ContactProps {
+  chave: string
   img: string
   contactName: string
   date: string
   message: string
   user: string
-  toggle: Function
+  toggle: any
 }
 
 export function Contact({
+  chave,
   img,
   contactName,
   date,
@@ -21,7 +22,8 @@ export function Contact({
 }: ContactProps) {
   return (
     //border-l-4 border-transparent
-    <div
+    <Link
+      to={`/chat/${chave}`}
       onClick={toggle}
       className="flex border justify-between gap-2 m-2 p-2  rounded-lg bg-slate-800 hover:border-l-4 hover:border-sky-500 hover:bg-slate-900"
     >
@@ -49,6 +51,6 @@ export function Contact({
           {user}
         </span>
       </div>
-    </div>
+    </Link>
   )
 }

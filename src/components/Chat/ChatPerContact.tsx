@@ -8,8 +8,10 @@ import {
   DeviceMobile,
   PaperPlaneRight
 } from 'phosphor-react'
+import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 
-export function ChatPerContact({ toggle }: Function) {
+export function ChatPerContact({ toggle }: any) {
   return (
     <div className="flex h-full flex-col items-center bg-slate-900 rounded-lg border border-slate-500 ">
       <header className="flex w-full p-2 items-center justify-between">
@@ -30,7 +32,7 @@ export function ChatPerContact({ toggle }: Function) {
         </div>
       </header>
       <main className="flex w-full h-full max-h-screen p-2 items-center justify-between border-t border-slate-500 bg-[url('https://images.unsplash.com/photo-1572557798994-41431698dc8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')]  bg-cover overflow-x-auto">
-        <div className="overflow-y-auto">CHAT AQ</div>
+        <div className="overflow-y-auto">{newMessage}</div>
       </main>
       <footer className="flex-col w-full items-center justify-between border-t border-slate-500">
         <div className="flex p-2 gap-2">

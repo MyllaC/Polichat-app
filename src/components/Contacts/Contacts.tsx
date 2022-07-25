@@ -7,9 +7,9 @@ import { ChatPerContact } from '../Chat/ChatPerContact'
 export function Contacts() {
   return (
     <div className="flex flex-col h-full">
-      <div className="flex flex-col items-center bg-slate-900 rounded-lg border border-slate-500 ">
+      <div className="bg-slate-900 rounded-lg border border-slate-500 flex-1 flex flex-col ">
         <ContactHeader />
-        <div className="w-full">
+        <div className="justify-start overflow-scroll h-[full]">
           {chatsData?.map((chat, i) => (
             <Contact
               key={i}

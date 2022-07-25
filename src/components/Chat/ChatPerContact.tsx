@@ -15,7 +15,7 @@ import { Texts } from './Texts'
 import { useParams } from 'react-router-dom'
 
 export function ChatPerContact() {
-  const { chave } = useParams<{ chave: string }>()
+  const { chave } = useParams<{ chave: any }>()
   const [newMessage, setNewMessage] = useState(false)
 
   useEffect(() => {

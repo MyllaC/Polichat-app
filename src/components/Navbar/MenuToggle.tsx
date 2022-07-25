@@ -1,6 +1,11 @@
 import { X, List } from 'phosphor-react'
 
-export function MenuToggle({ toggle, isOpen }) {
+interface MenuToggleProps {
+  toggle: any
+  isOpen: boolean
+}
+
+export function MenuToggle({ toggle, isOpen }: MenuToggleProps) {
   return (
     <div className="z-99 cursor-pointer ">
       <div className="flex" onClick={toggle}>

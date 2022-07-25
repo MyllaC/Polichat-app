@@ -1,5 +1,6 @@
 import { iconsChatData } from './IconsChatData'
 import { IconsChat } from './IconsChat'
+import { Link } from 'react-router-dom'
 import {
   DotsThreeVertical,
   ArrowLeft,
@@ -44,7 +45,10 @@ export function ChatPerContact() {
     <div className="flex flex-col h-full items-center bg-slate-900 rounded-lg border border-slate-500 ">
       <header className="flex w-full p-2 items-center justify-between">
         <div className="flex items-center gap-2">
-          <ArrowLeft size={25} />
+          <Link to={`/`}>
+            <ArrowLeft size={25} className="cursor-pointer" />
+          </Link>
+
           <img
             src={Contact?.img}
             alt="contact photo"

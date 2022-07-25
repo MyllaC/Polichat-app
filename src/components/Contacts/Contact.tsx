@@ -22,7 +22,7 @@ export function Contact({
     //border-l-4 border-transparent
     <Link
       to={`/chat/${chave}`}
-      className="flex border justify-between gap-2 m-3 p-2  rounded-lg bg-slate-800 hover:border-l-4 hover:border-sky-500 hover:bg-slate-900"
+      className="flex border-l-4 border-transparent justify-between gap-2 m-3 p-2  rounded-lg bg-slate-800 hover:border-l-4 hover:border-sky-500 hover:bg-slate-700 focus:border-l-4 focus:border-sky-500 focus:bg-slate-700"
     >
       <div className="flex items-center justify-center">
         <img

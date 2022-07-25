@@ -15,6 +15,11 @@ import { useParams } from 'react-router-dom'
 
 export function ChatPerContact() {
   const { chave } = useParams<{ chave: string }>()
+  const [newMessage, setNewMessage] = useState(false)
+
+  useEffect(() => {
+    setNewMessage(false)
+  }, [newMessage])
 
   function getData(URLKey: string) {
     const data = chatsData.find(data => data.chave === URLKey)
@@ -29,6 +34,8 @@ export function ChatPerContact() {
     chatsData[parseInt(chave)].poliText.push(inputMessage)
 
     event.target.textareaValue.value = ''
+
+    setNewMessage(true)
   }
 
   const Contact = getData(chave)
@@ -65,7 +72,8 @@ export function ChatPerContact() {
           >
             <div className="flex gap-1 pt-1">
               <WhatsappLogo size={18} color="#10b981" />
-              <textarea
+              <input
+                type="text"
                 name="textareaValue"
                 placeholder="Aa"
                 className="placeholder:italic placeholder:text-slate-400  block bg-transparent w-full  focus:outline-none focus:border-none sm:text-sm border border-slate-500 h-16"

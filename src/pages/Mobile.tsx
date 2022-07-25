@@ -5,13 +5,13 @@ import { ChatPerContact } from '../components/Chat/ChatPerContact'
 export function Mobile() {
   const { chave } = useParams<{ chave: string }>()
   return (
-    <div className="flex">
+    <div className="flex max-h-screen">
       {!chave ? (
-        <div className="flex flex-1 gap-6 m-4">
+        <div className="flex flex-1 max-h-screen">
           <Contacts />
         </div>
       ) : (
-        <div className="flex flex-1 gap-6 m-4">
+        <div className="m-4">
           <ChatPerContact />
         </div>
       )}

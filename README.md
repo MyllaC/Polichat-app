@@ -3,7 +3,7 @@
 ## Link da aplicação: https://polichat-by-mylla.vercel.app/
 ---
 
-![image](https://user-images.githubusercontent.com/92322675/180702518-e42e1118-d715-4c74-ac63-0f0b38affb34.png)
+![image](https://user-images.githubusercontent.com/92322675/180808256-5788b416-fc3a-46d9-a7bf-1f19393d89ea.png)
 
 
 ## 💻 Sobre a aplicação

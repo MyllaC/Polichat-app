@@ -8,14 +8,14 @@ export function Desktop() {
   return (
     <div className="flex flex-1">
       {!chave ? (
-        <div className="flex flex-1 gap-6 m-4">
+        <div className="flex flex-1 max-h-screen gap-3 p-3">
           <Contacts />
           <div className="flex-1">
             <Chat />
           </div>
         </div>
       ) : (
-        <div className="flex flex-1 gap-6 m-4">
+        <div className="flex flex-1 gap-3">
           <Contacts />
           <div className="flex-1">
             <ChatPerContact />

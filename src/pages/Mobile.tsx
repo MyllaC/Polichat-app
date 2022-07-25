@@ -7,7 +7,7 @@ export function Mobile() {
   return (
     <div className="flex max-h-screen">
       {!chave ? (
-        <div className="flex flex-1 max-h-screen m-4">
+        <div className="flex flex-1 max-h-screen">
           <Contacts />
         </div>
       ) : (

@@ -9,7 +9,7 @@ import {
   DeviceMobile,
   PaperPlaneRight
 } from 'phosphor-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, FormEvent, FormEventHandler } from 'react'
 import { chatsData } from '../Contacts/chatsData'
 import { Texts } from './Texts'
 import { useParams } from 'react-router-dom'
@@ -27,10 +27,12 @@ export function ChatPerContact() {
     return data
   }
 
-  function handleCreateNewMessage() {
-    event.preventDefault()
+  function handleCreateNewMessage(event: any) {
+    event?.preventDefault()
 
-    const inputMessage = event.target.textareaValue.value
+    const inputMessage = event?.target?.textareaValue?.value
+
+    console.log(inputMessage)
 
     chatsData[parseInt(chave)].poliText.push(inputMessage)
 
@@ -76,8 +78,7 @@ export function ChatPerContact() {
           >
             <div className="flex gap-1 pt-1">
               <WhatsappLogo size={18} color="#10b981" />
-              <input
-                type="text"
+              <textarea
                 name="textareaValue"
                 placeholder="Aa"
                 className="placeholder:italic placeholder:text-slate-400  block bg-transparent w-full  focus:outline-none focus:border-none sm:text-sm border border-slate-500 h-16"

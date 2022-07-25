@@ -9,7 +9,7 @@ export function Contacts() {
     <div className="flex flex-col h-full">
       <div className="bg-slate-900 rounded-lg border border-slate-500 flex-1 flex flex-col ">
         <ContactHeader />
-        <div className="justify-start overflow-scroll h-[full]">
+        <div className="justify-start overflow-y-auto h-[full]">
           {chatsData?.map((chat, i) => (
             <Contact
               key={i}

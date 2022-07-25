@@ -1,6 +1,6 @@
 import * as Icon from 'phosphor-react'
 interface SidebarIconProps {
-  name: string
+  name: any
   size: number
 }
 

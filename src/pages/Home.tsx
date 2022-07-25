@@ -11,7 +11,7 @@ export function Home() {
   return (
     <div className="flex flex-col h-screen">
       <Navbar />
-      <main className="flex flex-1">
+      <main className="flex flex-1 h-screen">
         <Sidebar />
         {!isMobile && <Desktop />}
         {isMobile && <Mobile />}

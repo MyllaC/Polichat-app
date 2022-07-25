@@ -8,7 +8,7 @@ export function Desktop() {
   return (
     <div className="flex flex-1 max-h-full ">
       {!chave ? (
-        <div className="flex flex-1 max-h-full gap-2">
+        <div className="flex flex-1 max-h-full gap-2 p-2">
           <Contacts />
           <div className="flex-1">
             <Chat />

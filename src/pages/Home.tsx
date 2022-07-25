@@ -1,36 +1,20 @@
-import { Contacts } from '../components/Contacts/Contacts'
 import { Navbar } from '../components/Navbar/Navbar'
 import { Sidebar } from '../components/Sidebar/Sidebar'
-import { useParams } from 'react-router-dom'
-import { ChatPerContact } from '../components/Chat/ChatPerContact'
-import { Chat } from '../components/Chat/Chat'
-import { chatsData } from '../components/Contacts/chatsData'
-import { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
+import { DeviceSize } from '../components/Navbar/DeviceSize'
+import { Desktop } from './Desktop'
+import { Mobile } from './Mobile'
 
 export function Home() {
-  const { chave } = useParams<{ chave: string }>()
+  const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile })
 
   return (
     <div className="flex flex-col min-h-screen ">
       <Navbar />
       <main className="flex flex-1">
         <Sidebar />
-
-        {!chave ? (
-          <div className="flex flex-1 gap-6 m-4">
-            <Contacts />
-            <div className="flex-1">
-              <Chat />
-            </div>
-          </div>
-        ) : (
-          <div className="flex flex-1 gap-6 m-4">
-            <Contacts />
-            <div className="flex-1">
-              <ChatPerContact />
-            </div>
-          </div>
-        )}
+        {!isMobile && <Desktop />}
+        {isMobile && <Mobile />}
       </main>
     </div>
   )

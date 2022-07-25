@@ -4,7 +4,7 @@ import { iconsData } from './IconsData'
 
 export function Sidebar() {
   return (
-    <aside className="w-[70px] max-h-screen bg-slate-900 flex flex-col items-center justify-between border-r border-b border-slate-500">
+    <aside className="w-[70px] max-h-full bg-slate-900 flex flex-col items-center justify-between border-r border-b border-slate-500">
       <div className="flex flex-col items-center">
         {iconsData?.map(({ name, size }, i) => (
           <SidebarIcon key={i} name={name} size={size} />

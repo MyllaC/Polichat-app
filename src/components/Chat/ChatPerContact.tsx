@@ -65,7 +65,7 @@ export function ChatPerContact() {
           <DotsThreeVertical size={32} />
         </div>
       </header>
-      <main className="w-full flex flex-1 flex-col items-end justify-start border-t border-slate-500 bg-slate-600 overflow-auto  bg-cover">
+      <main className="w-full flex flex-1 flex-col items-end justify-start border-t border-slate-500 bg-slate-600 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-track-slate-900 scrollbar-thumb-teal-700   bg-cover">
         {Contact?.poliText.map(line => (
           <Texts content={line} />
         ))}

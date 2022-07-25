@@ -6,16 +6,16 @@ import { ChatPerContact } from '../components/Chat/ChatPerContact'
 export function Desktop() {
   const { chave } = useParams<{ chave: string }>()
   return (
-    <div className="flex flex-1">
+    <div className="flex flex-1 max-h-full ">
       {!chave ? (
-        <div className="flex flex-1 max-h-screen gap-3 p-3">
+        <div className="flex flex-1 max-h-full gap-2">
           <Contacts />
           <div className="flex-1">
             <Chat />
           </div>
         </div>
       ) : (
-        <div className="flex flex-1 gap-3">
+        <div className="flex flex-1 gap-2 p-2">
           <Contacts />
           <div className="flex-1">
             <ChatPerContact />

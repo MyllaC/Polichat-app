@@ -16,7 +16,7 @@ export function Sidebar() {
           className="cursor-pointer rounded-full hover:bg-slate-600"
         />
         <span className="border border-rose-900 bg-rose-500 font-bold text-rose-900 p-1.5 rounded-full cursor-pointer hover:bg-rose-600">
-          GH
+          CA
         </span>
         <CaretDoubleRight
           size={20}

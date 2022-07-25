@@ -60,7 +60,7 @@ export function ChatPerContact() {
         </div>
         <div className="flex items-center gap-4">
           <span className="border border-rose-900 bg-rose-500 font-bold text-rose-900 p-1.5 rounded-full cursor-pointer hover:bg-rose-600">
-            GH
+            CA
           </span>
           <DotsThreeVertical size={32} />
         </div>
